@@ -34,7 +34,7 @@ function AppLayout() {
         <div
           className={`${
             open ? "w-[350px]" : "w-20"
-          } duration-300 h-screen absolute p-5 pt-8 bg-dark-green `}
+          } duration-300 h-screen relative p-5 pt-8 bg-dark-green `}
         >
           <p
             className="absolute cursor-pointer rounded-full -right-3 top-9 w-7 h-7 text-center border-2 border-dark-green bg-white"
@@ -82,7 +82,7 @@ function AppLayout() {
           </div> */}
         </div>
       </div>
-      <div className="p-7 pl-28 text-2xl font-semibold flex-1 h-screen overflow-y-auto">
+      <div className="p-7 pl-8 text-2xl font-semibold flex-1 h-screen overflow-y-auto sm:p-2">
         <div className={`${open && "sm:hidden"} `}>
           <Outlet />
         </div>

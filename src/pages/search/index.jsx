@@ -18,20 +18,20 @@ function Search() {
         ) : error ? (
           <p>Error while fetching data</p>
         ) : data ? (
-          <div className="grid grid-cols-5 gap-2 max-h-fit">
+          <div className="grid grid-cols-5 gap-2 gap-y-5 max-h-fit sm:grid-cols-2">
             {data?.products?.map((item, index) => (
-              <div className="w-[200px] rounded-md relative">
-                <div className="max-h-[220px] overflow-hidden flex justify-end rounded-lg">
+              <div className="w-[200px] rounded-lg relative sm:w-[150px] border-2">
+                <div className="max-h-[120px] overflow-hidden flex justify-end rounded-lg">
                   <img
                     src={item?.images[0]}
                     alt=""
-                    className="max-h-[220px] min-h-[220px] w-full"
+                    className="max-h-[120px] min-h-[120px] w-full"
                   />
-                  <p className="absolute mr-2 mt-4 text-[red] cursor-pointer hover:text-dark-green">
+                  <p className="absolute mr-2 mt-4 text-[red] cursor-pointer hover:text-dark-green sm:text-sm">
                     &#x2764;
                   </p>
                 </div>
-                <div className="py-2 px-1 ">
+                <div className="py-2 px-1">
                   <div className="flex-col justify-between items-start ">
                     <div>
                       <p className="text-[12px] truncate">{item?.title}</p>
@@ -51,7 +51,7 @@ function Search() {
                       &#x2B50; &#x2B50; &#x2B50;
                     </p>
                   </div>
-                  <button className="py-1 px-4 border-2 border-dark-green rounded-xl text-sm text-dark-green hover:bg-light-green hover:text-white hover:border-light-green">
+                  <button className="py-1 px-4 rounded-xl text-sm text-white bg-light-green">
                     <p>view</p>
                   </button>
                 </div>

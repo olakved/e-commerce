@@ -26,25 +26,25 @@ function UsersPage() {
             ))}
           </div>
           <div className=" gap-x-4 p-3">
-            {data.users.map((item, index) => (
+            {data?.users?.map((item, index) => (
               <div className="flex odd:bg-gray-100">
                 <p key={index} className="w-full text-center text-[15px]">
                   {item.id}
                 </p>
                 <p key={index} className="w-full text-center text-[15px]">
-                  {item.username}
+                  {item?.username}
                 </p>
                 <p key={index} className="w-full text-center text-[15px]">
-                  {item.firstName} - {item.lastName}
+                  {item?.firstName} - {item?.lastName}
                 </p>
                 <p key={index} className="w-full text-center text-[15px] ">
-                  {item.email}
+                  {item?.email}
                 </p>
                 <p key={index} className="w-full text-center text-[15px] ">
-                  {item.gender}
+                  {item?.gender}
                 </p>
                 <p key={index} className="w-full text-center text-[15px] ">
-                  {item.age}
+                  {item?.age}
                 </p>
               </div>
             ))}
