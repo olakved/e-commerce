@@ -15,7 +15,7 @@ function UsersPage() {
       {isLoading ? (
         <p>loading...</p>
       ) : error ? (
-        <p>Error while petching data</p>
+        <p>Error while fetching data</p>
       ) : data ? (
         <div className="">
           <div className="flex bg-light-green gap-x-4 p-3">
