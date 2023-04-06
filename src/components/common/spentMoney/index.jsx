@@ -1,5 +1,6 @@
 import React from "react";
 import moneyIn from "../../../assets/moneyIn.png";
+import moneyOut from "../../../assets/moneyOut.png";
 
 function MoneySpent() {
   return (
@@ -7,7 +8,7 @@ function MoneySpent() {
       <div className="flex items-center gap-x-4">
         <div className="w-[40px] h-[40px] rounded-md bg-dark-green flex justify-center items-center">
           <img
-            src={moneyIn}
+            src={moneyOut}
             alt=""
             className="w-[20px] h-[20px] flex justify-center items-center text-white "
           />

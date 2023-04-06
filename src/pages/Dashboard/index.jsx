@@ -25,10 +25,10 @@ function UserDashboard() {
             <PaymentHistory />
           </div>
           <div className="w-[60%]">
-            <div className="bg-dark-green text-white h-[250px] sm:w-72 mb-5 rounded-md">
+            <div className="bg-dark-green text-white h-[250px] sm:w-60 mb-5 rounded-md">
               <p className="">Chart</p>
             </div>
-            <div className="bg-dark-green text-white h-[250px] sm:w-72 rounded-md">
+            <div className="bg-dark-green text-white h-[250px] sm:w-60 rounded-md">
               <p className="">Side 2</p>
             </div>
           </div>

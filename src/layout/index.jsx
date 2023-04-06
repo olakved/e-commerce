@@ -33,7 +33,7 @@ function AppLayout() {
       <div className="">
         <div
           className={`${
-            open ? "w-72" : "w-20"
+            open ? "w-[350px]" : "w-20"
           } duration-300 h-screen relative p-5 pt-8 bg-dark-green `}
         >
           <p
@@ -76,14 +76,14 @@ function AppLayout() {
               </li>
             ))}
           </ul>
-          <div className="flex justify-center sm:justify-start gap-x-3 text-white m-5 hover:bg-light-green rounded-md p-2">
+          {/* <div className="flex justify-center sm:justify-start gap-x-3 text-white m-5 hover:bg-light-green rounded-md p-2">
             <img src={logoutImg} alt="" className="w-[25px]" />
             <p className="">Logout</p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="p-7 text-2xl font-semibold flex-1 h-screen overflow-y-auto">
-        <div>
+        <div className={`${open && "hidden"} `}>
           <Outlet />
         </div>
       </div>
