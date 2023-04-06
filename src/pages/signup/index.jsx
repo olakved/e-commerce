@@ -30,8 +30,8 @@ function SignupPage() {
   };
 
   return (
-    <div className="w-screen h-screen overflow-hidden flex justify-between">
-      <div className="px-20 py-10 flex flex-col  items-center w-1/2 ">
+    <div className="w-screen h-screen overflow-hidden flex justify-between sm:h-full">
+      <div className="px-20 py-10 flex flex-col  items-center w-1/2 sm:w-full sm:px-5 sm:py-3 ">
         <div className="w-full">
           <div className="mb-7 border-b-2 py-3">
             <h1 className="text-dark-green text-3xl font-bold mb-3">
@@ -96,7 +96,7 @@ function SignupPage() {
           </div>
         </div>
       </div>
-      <div className="w-1/2 flex justify-center">
+      <div className="w-1/2 flex justify-center sm:hidden">
         <div className="absolute bg-black/50 w-1/2 h-full"></div>
         <div className="">
           <img src={signupBg} alt="" className="" />
