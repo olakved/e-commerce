@@ -19,17 +19,25 @@ function LoginPage() {
 
   const navigate = useNavigate();
 
+  // const formSubmit = (data) => {
+  //   console.log(data);
+  //   if (patternCheck.test(data.email)) {
+  //     return navigate("/profile");
+  //   }
+  //   alert("invalid Email");
+  // };
+
   const formSubmit = (data) => {
     console.log(data);
-    if (patternCheck.test(data.email)) {
-      return "invalid Email";
+    if (patternCheck.test(data.email) === false) {
+      return alert("invalid Email");
     }
     navigate("/profile");
   };
 
   return (
-    <div className=" my-[113px] flex justify-center ">
-      <div className="bg-[#003b32] h-[400px] w-[400px] mt-[30px] flex items-center flex-col">
+    <div className="flex justify-center ">
+      <div className="bg-[#003b32]  w-[400px] mt-[30px] flex items-center flex-col">
         <h1 className="text-neutral-50 mt-[30px] text-2xl font-bold">
           LOGIN HERE
         </h1>
@@ -48,7 +56,7 @@ function LoginPage() {
               type="password"
               placeholder="Password"
               name="password"
-              {...register("password")}
+              {...register("password", { required: true })}
               autoComplete="off"
             />
             <div className="flex items-center mt-4">
@@ -64,6 +72,16 @@ function LoginPage() {
             <i className="mt-6 text-white text-sm">
               <Link to="/">forgot password</Link>
             </i>
+
+            <p className="mt-6 text-white text-sm">
+              Don't have an Account? Signup now
+            </p>
+            <button
+              className="mt-2 bg-white text-dark-green hover:bg-light-green hover:text-white w-full p-2 rounded-md text-sm"
+              type="submit"
+            >
+              <Link to={"/signup"}>Signup</Link>
+            </button>
           </form>
         </div>
       </div>

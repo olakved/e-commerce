@@ -13,6 +13,7 @@ import AppLayout from "./layout";
 import UserDashboard from "./pages/Dashboard";
 import UsersPage from "./pages/users";
 import HeaderDashboard from "./components/common/headerDashboard";
+import SignupPage from "./pages/signup";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             </LayoutWrapper>
           }
         />
+        <Route path="/signup" element={<SignupPage />} />
         <Route
           path="/login"
           element={

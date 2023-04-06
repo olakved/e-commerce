@@ -3,9 +3,9 @@ import moneyIn from "../../../assets/moneyIn.png";
 
 function MoneySpent() {
   return (
-    <div className="bg-cyan-100 py-6 px-10 rounded-md">
+    <div className="bg-teal-100 py-6 px-10 rounded-md">
       <div className="flex items-center gap-x-4">
-        <div className="w-[40px] h-[40px] rounded-md bg-black flex justify-center items-center">
+        <div className="w-[40px] h-[40px] rounded-md bg-dark-green flex justify-center items-center">
           <img
             src={moneyIn}
             alt=""
@@ -18,7 +18,7 @@ function MoneySpent() {
         </div>
       </div>
       <div className="flex items-center gap-x-4 mt-4">
-        <div className="w-[40px] h-[40px] rounded-md bg-black flex justify-center items-center">
+        <div className="w-[40px] h-[40px] rounded-md bg-dark-green flex justify-center items-center">
           <img
             src={moneyIn}
             alt=""

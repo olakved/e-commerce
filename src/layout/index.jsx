@@ -11,7 +11,7 @@ import settingImg from "../assets/Setting.png";
 import { Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
-import HeaderDashboard from "../components/common/headerDashboard";
+import logoutImg from "../assets/logout.png";
 
 const Menus = [
   { title: "Dashboard", img: chartFill, path: "dashboard" },
@@ -29,7 +29,7 @@ function AppLayout() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen overflow-hidden overscroll-none">
       <div className="  ">
         <div
           className={`${
@@ -37,7 +37,7 @@ function AppLayout() {
           } duration-300 h-screen relative p-5 pt-8 bg-dark-green `}
         >
           <p
-            className="absolute cursor-pointer rounded-full -right-3 top-9 w-7 h7 text-center border-2 border-dark-green bg-white"
+            className="absolute cursor-pointer rounded-full -right-3 top-9 w-7 h-7 text-center border-2 border-dark-green bg-white"
             onClick={() => setOpen(!open)}
           >
             +
@@ -76,6 +76,10 @@ function AppLayout() {
               </li>
             ))}
           </ul>
+          <div className="flex justify-center gap-x-3 text-white m-5 hover:bg-light-green rounded-md p-2">
+            <img src={logoutImg} alt="" className="w-[25px]" />
+            <p>Logout</p>
+          </div>
         </div>
       </div>
       <div className="p-7 text-2xl font-semibold flex-1 h-screen overflow-y-auto">

@@ -4,7 +4,7 @@ import visaImg from "../../../assets/visa.png";
 
 function AtmCard() {
   return (
-    <div className="bg-[yellow] p-5 rounded-md">
+    <div className="bg-lime-100 p-5 rounded-md">
       <div className="flex justify-between mb-5 items-center">
         <h1 className="text-sm">Jerry Walker</h1>
         <img src={wifiIcon} alt="" className=" w-[25px] h-[25px]" />
