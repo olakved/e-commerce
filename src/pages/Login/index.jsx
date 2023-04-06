@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import bgImg from "../../assets/signupBg.jpg";
 
 function LoginPage() {
   const patternCheck = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -36,8 +36,12 @@ function LoginPage() {
   };
 
   return (
-    <div className="flex justify-center ">
-      <div className="bg-[#003b32]  w-[400px] mt-[30px] flex items-center flex-col">
+    <div className="flex justify-center h-full sm:h-screen">
+      <div className="w-full h-full relative blur-sm">
+        <img src={bgImg} alt="" className="relative" />
+        <div className="bg-black/40 w-full h-full absolute top-0"></div>
+      </div>
+      <div className="bg-[#003b32]  w-[400px] mt-[30px] flex items-center flex-col absolute">
         <h1 className="text-neutral-50 mt-[30px] text-2xl font-bold">
           LOGIN HERE
         </h1>
