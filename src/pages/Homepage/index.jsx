@@ -19,7 +19,7 @@ function HomePage() {
             <Link to={"/signup"}>Signup</Link>
           </button>
           <button className="px-7 py-3 border-2 border-light-green bg-white text-dark-green rounded-md hover:bg-light-green hover:text-white">
-            <Link to={"/signup"}>Login</Link>
+            <Link to={"/login"}>Login</Link>
           </button>
         </div>
       </div>
