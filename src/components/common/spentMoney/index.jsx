@@ -14,7 +14,7 @@ function MoneySpent() {
           />
         </div>
         <div>
-          <p className="text-sm text-gray-500">Money spent</p>
+          <p className="text-sm text-gray-600">Money spent</p>
           <p className="text-md">$1200.00</p>
         </div>
       </div>
