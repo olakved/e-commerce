@@ -38,7 +38,7 @@ function LoginPage() {
   return (
     <div className="flex justify-center w-full sm:h-screen">
       <div className="w-full max-h-screen relative blur-sm overflow-hidden">
-        <img src={bgImg} alt="" className="relative" />
+        <img src={bgImg} alt="" className="relative sm:h-screen" />
         <div className="bg-black/40 w-full h-full absolute top-0"></div>
       </div>
       <div className="bg-green-200/20 w-[400px] mt-[50px] flex items-center flex-col absolute">
