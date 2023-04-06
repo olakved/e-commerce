@@ -4,12 +4,12 @@ import visaImg from "../../../assets/visa.png";
 
 function AtmCard() {
   return (
-    <div className="bg-lime-100 p-5 rounded-md">
+    <div className="bg-lime-100 p-5 rounded-md sm:p-3 sm:mb-3 sm:w-full">
       <div className="flex justify-between mb-5 items-center">
         <h1 className="text-sm">Jerry Walker</h1>
         <img src={wifiIcon} alt="" className=" w-[25px] h-[25px]" />
       </div>
-      <p>1200 0145 4215 0878</p>
+      <p className="sm:text-lg">1200 0145 4215 0878</p>
       <div className="flex justify-between items-center mt-5">
         <p>
           <span className="text-[15px] text-gray-700 mr-1">Exp</span>

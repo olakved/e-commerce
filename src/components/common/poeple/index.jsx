@@ -3,7 +3,7 @@ import profileImg from "../../../assets/profileImg.jpg";
 
 function CardPeople() {
   return (
-    <div className="bg-lime-200 p-7 rounded-md">
+    <div className="bg-lime-200 p-7 rounded-md sm:w-full">
       <div className="flex justify-between">
         <p className="text-sm">
           Add More <br /> friens to Oreum <br />

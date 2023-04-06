@@ -4,7 +4,7 @@ import profileImg from "../../../assets/profileImg.jpg";
 
 function SendMoney() {
   return (
-    <div className="w-72">
+    <div className="w-72 sm:w-full">
       <div className="bg-dark-green rounded-md p-5 mb-5 mt-2 flex justify-between items-center">
         <img src={visaImg} alt="" className="w-[40px]" />
         <div className="text-white text-sm flex gap-x-3">

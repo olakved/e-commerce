@@ -29,15 +29,15 @@ function AppLayout() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex h-screen overflow-hidden overscroll-none">
-      <div className="  ">
+    <div className="flex h-screen overflow-hidden overscroll-none ">
+      <div className="">
         <div
           className={`${
             open ? "w-72" : "w-20"
           } duration-300 h-screen relative p-5 pt-8 bg-dark-green `}
         >
           <p
-            className="absolute cursor-pointer rounded-full -right-3 top-9 w-7 h-7 text-center border-2 border-dark-green bg-white"
+            className="absolute cursor-pointer rounded-full -right-3 top-9 w-7 h-7 text-center border-2 border-dark-green bg-white sm:hidden"
             onClick={() => setOpen(!open)}
           >
             +
@@ -62,7 +62,7 @@ function AppLayout() {
             {Menus.map((menu, index) => (
               <li
                 key={index}
-                className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-light-green rounded-md ${
+                className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-light-green rounded-md sm:mt-2 ${
                   menu.gap ? "mt-9" : "mt-2"
                 }`}
                 onClick={() => navigate(`${menu.path}`)}
@@ -76,9 +76,9 @@ function AppLayout() {
               </li>
             ))}
           </ul>
-          <div className="flex justify-center gap-x-3 text-white m-5 hover:bg-light-green rounded-md p-2">
+          <div className="flex justify-center sm:justify-start gap-x-3 text-white m-5 hover:bg-light-green rounded-md p-2">
             <img src={logoutImg} alt="" className="w-[25px]" />
-            <p>Logout</p>
+            <p className="">Logout</p>
           </div>
         </div>
       </div>

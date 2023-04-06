@@ -10,25 +10,27 @@ function UserDashboard() {
   return (
     <div className="">
       <HeaderDashboard />
-      <div className=" px-5">
-        <div className="flex justify-between">
+      <div className=" px-5 sm:p-0">
+        <div className="flex justify-between sm:flex-col ">
           <AtmCard />
-          <div className="flex items-center gap-x-10">
+          <div className="flex items-center gap-x-10 sm:flex-col sm:gap-y-5">
             <CardPeople />
             <MoneySpent />
           </div>
         </div>
-        <div className="flex justify-between mt-5">
-          <div className="border-2 border-black rounded-md p-5">
+        <div className="flex justify-between mt-5 sm:flex-col sm:gap-y-5">
+          <div className="border-2 border-black rounded-md p-5 ">
             <h1 className="text-[20px]">Send Money</h1>
             <SendMoney />
             <PaymentHistory />
           </div>
           <div className="w-[60%]">
-            <div className="bg-dark-green text-white h-[250px] rounded-md">
-              <p>Chart</p>
+            <div className="bg-dark-green text-white h-[250px] sm:w-72 mb-5 rounded-md">
+              <p className="">Chart</p>
             </div>
-            <p>Side 2</p>
+            <div className="bg-dark-green text-white h-[250px] sm:w-72 rounded-md">
+              <p className="">Side 2</p>
+            </div>
           </div>
         </div>
       </div>
