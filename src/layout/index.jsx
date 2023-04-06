@@ -37,7 +37,7 @@ function AppLayout() {
           } duration-300 h-screen relative p-5 pt-8 bg-dark-green `}
         >
           <p
-            className="absolute cursor-pointer rounded-full -right-3 top-9 w-7 h-7 text-center border-2 border-dark-green bg-white sm:hidden"
+            className="absolute cursor-pointer rounded-full -right-3 top-9 w-7 h-7 text-center border-2 border-dark-green bg-white"
             onClick={() => setOpen(!open)}
           >
             +
