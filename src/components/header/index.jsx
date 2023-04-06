@@ -3,6 +3,7 @@ import { HeaderWrapper } from "./styles";
 import { headerData } from "./mock";
 import { Link } from "react-router-dom";
 import headerLogo from "../../assets/logo.png";
+
 function Header() {
   return (
     <HeaderWrapper className="w-[100%]">
@@ -24,7 +25,7 @@ function Header() {
               </div>
             ))}
 
-            <button className="navMenuBtn">
+            <button className="navMenuBtn sm:hidden">
               <Link to="/login">Login</Link>
             </button>
           </div>

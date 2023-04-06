@@ -34,6 +34,13 @@ export const HeaderWrapper = styled.header`
     padding: 20px 80px;
   }
 
+  .headerBox.Active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .navMenu {
     display: flex;
     align-items: center;
@@ -92,7 +99,6 @@ export const HeaderWrapper = styled.header`
 
   @media screen and (max-width: 550px) {
     .headerBox {
-      margin-top: 15px;
       padding: 20px 40px;
     }
 
