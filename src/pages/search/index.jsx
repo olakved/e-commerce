@@ -19,11 +19,11 @@ function Search() {
           <p>Error while fetching data</p>
         ) : data ? (
           <div className="grid grid-cols-5 gap-2 max-h-fit">
-            {data.products.map((item, index) => (
+            {data?.products?.map((item, index) => (
               <div className="w-[200px] rounded-md relative">
                 <div className="max-h-[220px] overflow-hidden flex justify-end rounded-lg">
                   <img
-                    src={item.images[0]}
+                    src={item?.images[0]}
                     alt=""
                     className="max-h-[220px] min-h-[220px] w-full"
                   />
@@ -34,14 +34,14 @@ function Search() {
                 <div className="py-2 px-1 ">
                   <div className="flex-col justify-between items-start ">
                     <div>
-                      <p className="text-[12px] truncate">{item.title}</p>
+                      <p className="text-[12px] truncate">{item?.title}</p>
                     </div>
                     <div>
                       <p className="text-[14px] font-bold -mt-2">
-                        N{item.price}
+                        N{item?.price}
                       </p>
                       <p className="text-[14px] font-bold -mt-2 line-through decoration-double">
-                        N{item.price}
+                        N{item?.price}
                       </p>
                     </div>
                   </div>
