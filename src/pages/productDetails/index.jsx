@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import imgTest from "../../assets/profileImg.jpg";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
@@ -12,6 +12,8 @@ function ProductDetails() {
     axios.get(`https://dummyjson.com/products/${id}`).then((res) => res.data)
   );
   console.log(data);
+
+  const navigate = useNavigate();
 
   //   const {
   //     isLoading: catergoryLoading,
@@ -29,7 +31,14 @@ function ProductDetails() {
       <div>
         <HeaderDashboard />
       </div>
-
+      <div className="p-4">
+        <button
+          className="px-4 text-white bg-light-green rounded-md"
+          onClick={() => navigate(-1)}
+        >
+          Back
+        </button>
+      </div>
       <div className=" py-10 px-16 sm:py-2 sm:px-5">
         <div className="flex justify-center items-start gap-x-10 sm:flex-col ">
           <div className=" w-1/2 mt-10 sm:w-full sm:mb-4">

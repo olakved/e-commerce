@@ -48,7 +48,7 @@ function Search() {
                       <p className="text-[14px] font-bold -mt-2">
                         N{item?.price}
                       </p>
-                      <p className="text-[14px] font-bold -mt-2 line-through decoration-double">
+                      <p className="text-[12px] font-bold text-gray-400 -mt-2 line-through decoration-double">
                         N{item?.price}
                       </p>
                     </div>
