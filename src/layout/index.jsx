@@ -40,7 +40,7 @@ function AppLayout() {
             className="absolute cursor-pointer rounded-full right-3 top-6 "
             onClick={() => setOpen(!open)}
           >
-            <img src={menuIcon} alt="" className="w-4 h-4" />
+            <img src={menuIcon} alt="MenuIcon" className="w-5 h-5" />
           </p>
           <div className="flex gap-x-4 items-center">
             <img
