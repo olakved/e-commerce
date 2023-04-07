@@ -27,9 +27,10 @@ function HomePage() {
               Login
             </button>
           </Link>
-          <h1>Auth0 Login</h1>
+        </div>
+        <div className="flex items-center justify-center mt-5 gap-x-5">
+          <h1>Auth0 Login Test</h1>
           <LoginButton />
-          <LogoutButton />
         </div>
       </div>
     </div>
