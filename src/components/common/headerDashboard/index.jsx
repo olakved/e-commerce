@@ -5,7 +5,7 @@ import userImg from "../../../assets/User.png";
 
 function HeaderDashboard() {
   return (
-    <div className="flex justify-between p-3 mb-[20px] border-b border-dark-green sm:flex-col sm:p-1 sm:border-none">
+    <div className="flex justify-between p-3 mb-[20px] border-b border-dark-green sm:flex-col sm:items-center sm:p-1 sm:border-none">
       <h1 className="sm:mb-3">Welcome...</h1>
       <div className="flex gap-x-4 sm:gap-x-1">
         {/* Search Bar */}
