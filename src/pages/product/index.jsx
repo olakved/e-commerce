@@ -4,18 +4,17 @@ import axios from "axios";
 import { NavLink, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import ProductPage from "../product";
 
-function Search() {
+function ProductPage() {
   const { isLoading, error, data } = useQuery(["users"], () =>
     axios.get("https://dummyjson.com/products").then((res) => res.data)
   );
+  console.log(data);
 
   const navigate = useNavigate();
 
   return (
     <div>
-      <HeaderDashboard />
       <div>
         {isLoading ? (
           <p>loading...</p>
@@ -25,7 +24,6 @@ function Search() {
           <div className="grid grid-cols-5 gap-2 gap-y-5 max-h-fit sm:grid-cols-2">
             {data?.products?.map((item) => (
               <div
-                // onClick={() => navigate(`${item.id}`)}
                 key={item?.id}
                 className="w-[200px] rounded-lg relative sm:w-[150px] border-2"
               >
@@ -35,8 +33,8 @@ function Search() {
                     alt=""
                     className="max-h-[120px] min-h-[120px] w-full"
                   />
-                  <p className="absolute mr-2 mt-4 bg-[#ff000083] text-[white] text-[10px] rounded-md px-1 py-0">
-                    -{item?.discountPercentage}%
+                  <p className="absolute mr-2 mt-4 text-[red] cursor-pointer hover:text-dark-green sm:text-sm">
+                    &#x2764;
                   </p>
                 </div>
                 <div className="py-2 px-1">
@@ -60,7 +58,7 @@ function Search() {
                     </p>
                   </div>
                   <button className="py-1 px-4 rounded-xl text-sm text-white bg-light-green ">
-                    <Link to={`/search/${item?.id}`}>
+                    <Link to={`/product/${item?.id}`}>
                       <p>view</p>
                     </Link>
                   </button>
@@ -74,4 +72,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default ProductPage;

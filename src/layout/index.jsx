@@ -62,25 +62,27 @@ function AppLayout() {
             {Menus.map((menu, index) => (
               <li
                 key={index}
-                className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-light-green rounded-md sm:mt-2 ${
-                  menu.gap ? "mt-9" : "mt-2"
+                className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-light-green rounded-md sm:mt-3 ${
+                  menu?.gap ? "mt-9" : "mt-2"
                 }`}
-                onClick={() => navigate(`${menu.path}`)}
+                onClick={() => navigate(`${menu?.path}`)}
               >
-                <img src={menu.img} alt="" />
+                <img src={menu?.img} alt="" />
                 <span
                   className={`${!open && "hidden"} origin-left duration-200`}
                 >
-                  {menu.title}
+                  {menu?.title}
                 </span>
               </li>
             ))}
           </ul>
-          {/* <div className="flex justify-center sm:justify-start gap-x-3 text-white m-5 hover:bg-light-green rounded-md p-2">
-            <img src={logoutImg} alt="" className="w-[25px]" />
-            <p className="">Logout</p>
-          </div> */}
         </div>
+        {/* <div className="flex justify-center sm:justify-start gap-x-3 text-white m-5 hover:bg-light-green rounded-md p-2">
+          <img src={logoutImg} alt="" className="w-[25px]" />
+          <p className="" onClick={() => navigate("logout")}>
+            Logout
+          </p>
+        </div> */}
       </div>
       <div className="p-7 pl-8 text-2xl font-semibold flex-1 h-screen overflow-y-auto sm:p-2">
         <div className={`${open && "sm:hidden"} `}>

@@ -14,6 +14,9 @@ import UserDashboard from "./pages/Dashboard";
 import UsersPage from "./pages/users";
 import HeaderDashboard from "./components/common/headerDashboard";
 import SignupPage from "./pages/signup";
+import ErrorPage from "./pages/error";
+import ProductDetails from "./pages/productDetails";
+import ProductPage from "./pages/product";
 
 function App() {
   return (
@@ -44,9 +47,10 @@ function App() {
             </LayoutWrapper>
           }
         />
+        <Route path="*" element={<ErrorPage />} />
 
         {/* App Routes */}
-        <Route path="/profile" element={<AppLayout />}>
+        <Route path="profile" element={<AppLayout />}>
           <Route index element={<UserDashboard />} />
           <Route path="dashboard" element={<UserDashboard />} />
           <Route path="accounts" element={<Accounts />} />
@@ -54,9 +58,11 @@ function App() {
           <Route path="files" element={<Files />} />
           <Route path="users" element={<UsersPage />} />
           <Route path="schedule" element={<Schedule />} />
-          <Route path="search" element={<Search />} />
+          <Route path="search" element={<Search />}></Route>
           <Route path="settings" element={<Settings />} />
         </Route>
+        <Route path="search/:id" element={<ProductDetails />} />
+        <Route path="logout" element={<LoginPage />} />
       </Routes>
       {/* </LayoutWrapper> */}
     </>
