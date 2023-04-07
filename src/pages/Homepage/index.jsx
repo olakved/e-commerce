@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LoginButton from "../../components/auth/loginButton";
+import LogoutButton from "../../components/auth/logoutButton";
 
 function HomePage() {
   return (
@@ -15,12 +17,19 @@ function HomePage() {
           Go to Signup, Login and View the Dashboard
         </p>
         <div className="flex gap-x-10 justify-center items-center mt-7">
-          <button className="px-7 py-3 bg-dark-green text-white rounded-md">
-            <Link to={"/signup"}>Signup</Link>
-          </button>
-          <button className="px-7 py-3 border-2 border-light-green bg-white text-dark-green rounded-md hover:bg-light-green hover:text-white">
-            <Link to={"/login"}>Login</Link>
-          </button>
+          <Link to={"/signup"}>
+            <button className="px-7 py-3 bg-dark-green text-white rounded-md">
+              Signup
+            </button>
+          </Link>
+          <Link to={"/login"}>
+            <button className="px-7 py-3 border-2 border-light-green bg-white text-dark-green rounded-md hover:bg-light-green hover:text-white">
+              Login
+            </button>
+          </Link>
+          <h1>Auth0 Login</h1>
+          <LoginButton />
+          <LogoutButton />
         </div>
       </div>
     </div>

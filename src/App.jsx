@@ -12,11 +12,10 @@ import Settings from "./pages/settings";
 import AppLayout from "./layout";
 import UserDashboard from "./pages/Dashboard";
 import UsersPage from "./pages/users";
-import HeaderDashboard from "./components/common/headerDashboard";
 import SignupPage from "./pages/signup";
 import ErrorPage from "./pages/error";
 import ProductDetails from "./pages/productDetails";
-import ProductPage from "./pages/product";
+import HeaderN from "./components/headerN";
 
 function App() {
   return (
@@ -34,19 +33,12 @@ function App() {
           path="/product"
           element={
             <LayoutWrapper>
-              <HeaderDashboard />
+              <HeaderN />
             </LayoutWrapper>
           }
         />
         <Route path="/signup" element={<SignupPage />} />
-        <Route
-          path="/login"
-          element={
-            <LayoutWrapper>
-              <LoginPage />
-            </LayoutWrapper>
-          }
-        />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<ErrorPage />} />
 
         {/* App Routes */}

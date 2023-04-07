@@ -36,12 +36,12 @@ function LoginPage() {
   };
 
   return (
-    <div className="flex justify-center w-full sm:h-screen">
+    <div className="flex justify-center items-center w-full sm:h-screen">
       <div className="w-full max-h-screen relative blur-sm overflow-hidden">
         <img src={bgImg} alt="" className="relative sm:h-screen" />
         <div className="bg-black/40 w-full h-full absolute top-0"></div>
       </div>
-      <div className="bg-green-200/20 w-[400px] mt-[50px] flex items-center flex-col absolute">
+      <div className="bg-green-200/20  w-[400px] mt-[50px] flex items-center flex-col absolute">
         <h1 className="text-neutral-50 mt-[30px] text-2xl font-bold">
           LOGIN HERE
         </h1>
