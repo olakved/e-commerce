@@ -5,7 +5,7 @@ import LogoutButton from "../../components/auth/logoutButton";
 
 function HomePage() {
   return (
-    <div className="w-screen h-screen overflow-hidden">
+    <div className="w-screen h-screen overflow-hidden pt-14">
       <div className="mt-10">
         <h1 className="text-[red] font-bold text-4xl text-center">
           Page Under Construction!
