@@ -11,7 +11,7 @@ import settingImg from "../assets/Setting.png";
 import { Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
-import logoutImg from "../assets/logout.png";
+import menuIcon from "../assets/menuIconWh.png";
 
 const Menus = [
   { title: "Dashboard", img: chartFill, path: "dashboard" },
@@ -33,14 +33,14 @@ function AppLayout() {
       <div className="">
         <div
           className={`${
-            open ? "w-[350px]" : "w-20"
+            open ? "w-[350px]" : "w-2"
           } duration-300 h-screen relative p-5 pt-8 bg-dark-green `}
         >
           <p
-            className="absolute cursor-pointer rounded-full -right-3 top-6 w-7 h-7 text-center border-2 border-dark-green bg-white"
+            className="absolute cursor-pointer rounded-full right-3 top-6 "
             onClick={() => setOpen(!open)}
           >
-            +
+            <img src={menuIcon} alt="" className="w-4 h-4" />
           </p>
           <div className="flex gap-x-4 items-center">
             <img
