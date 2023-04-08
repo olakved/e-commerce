@@ -65,7 +65,9 @@ function AppLayout() {
                 className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-light-green rounded-md sm:mt-3 ${
                   menu?.gap ? "mt-9" : "mt-2"
                 }`}
-                onClick={() => navigate(`${menu?.path}`)}
+                onClick={() => {
+                  `${navigate(`${menu?.path}`) ? "" : setOpen(!open)}`;
+                }}
               >
                 <img src={menu?.img} alt="" />
                 <span
