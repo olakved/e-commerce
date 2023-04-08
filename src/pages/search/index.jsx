@@ -22,7 +22,7 @@ function Search() {
         ) : error ? (
           <p>Error while fetching data</p>
         ) : data ? (
-          <div className="grid grid-cols-5 gap-2 gap-y-5 max-h-fit sm:grid-cols-2">
+          <div className="grid grid-cols-5 gap-2 gap-y-5 max-h-fit lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
             {data?.products?.map((item) => (
               <div
                 // onClick={() => navigate(`${item.id}`)}

@@ -80,12 +80,14 @@ function LoginPage() {
             <p className="mt-6 text-white text-sm">
               Don't have an Account? Signup now
             </p>
-            <button
-              className="mt-2 bg-white text-dark-green hover:bg-light-green hover:text-white w-full p-2 rounded-md text-sm"
-              type="submit"
-            >
-              <Link to={"/signup"}>Signup</Link>
-            </button>
+            <Link to={"/signup"}>
+              <button
+                className="mt-2 bg-white text-dark-green hover:bg-light-green hover:text-white w-full p-2 rounded-md text-sm"
+                type="submit"
+              >
+                Signup
+              </button>
+            </Link>
           </form>
         </div>
       </div>

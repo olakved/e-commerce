@@ -33,7 +33,7 @@ function AppLayout() {
       <div className="">
         <div
           className={`${
-            open ? "w-[350px]" : "w-2"
+            open ? "w-[300px]" : "w-2"
           } duration-300 h-screen relative p-5 pt-8 bg-dark-green `}
         >
           <p

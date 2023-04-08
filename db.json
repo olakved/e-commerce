@@ -1,0 +1,42 @@
+{
+  "foods": [
+      {
+          "id": 1,
+          "checked": false,
+          "item": "Almonds, Unsalted, in the blue bag"
+      },
+      {
+          "id": 1,
+          "checked": false,
+          "item": "Pizza"
+      },
+      {
+          "id": 3,
+          "checked": false,
+          "item": "Bread"
+      }
+  ],
+
+  "users":[
+    {
+      "name": "Lekan",
+      "address": "Lagos",
+      "phone": "08100805056"
+    },
+    {
+      "name": "Mike",
+      "address": "Ogun",
+      "phone": "09036188269"
+    },
+    {
+      "name": "Korede",
+      "address": "Oyo",
+      "phone": "09036188270"
+    },
+    {
+      "name": "Akin",
+      "address": "Ondo",
+      "phone": "09036188271"
+    }
+  ]
+}

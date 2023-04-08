@@ -86,13 +86,19 @@ function SignupPage() {
               Sign Up
             </button>
           </form>
-          <div className="flex gap-x-5 mt-5">
-            <button className="border-2 border-dark-green text-dark-green outline-none rounded-md p-2 w-1/2 hover:bg-light-green hover:text-white hover:border-light-green">
-              <Link to={"/"}>Home</Link>
-            </button>
-            <button className="border-2 border-dark-green text-dark-green outline-none rounded-md p-2 w-1/2 hover:bg-light-green hover:text-white hover:border-light-green">
-              <Link to={"/login"}>Login</Link>
-            </button>
+          <div className="flex justify-center items-center gap-x-5 mt-5">
+            <Link
+              to={"/"}
+              className="border-2 border-dark-green text-dark-green text-center outline-none rounded-md p-2 w-1/2 hover:bg-light-green hover:text-white hover:border-light-green"
+            >
+              <button>Home</button>
+            </Link>
+            <Link
+              to={"/login"}
+              className="border-2 border-dark-green text-dark-green text-center outline-none rounded-md p-2 w-1/2 hover:bg-light-green hover:text-white hover:border-light-green"
+            >
+              <button>Login</button>
+            </Link>
           </div>
         </div>
       </div>
