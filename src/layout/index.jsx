@@ -66,7 +66,9 @@ function AppLayout() {
                   menu?.gap ? "mt-9" : "mt-2"
                 }`}
                 onClick={() => {
-                  `${navigate(`${menu?.path}`) ? "" : setOpen(!open)}`;
+                  {
+                    navigate(`${menu?.path}`) ? false : setOpen(!open);
+                  }
                 }}
               >
                 <img src={menu?.img} alt="" />

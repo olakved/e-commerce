@@ -16,6 +16,8 @@ import SignupPage from "./pages/signup";
 import ErrorPage from "./pages/error";
 import ProductDetails from "./pages/productDetails";
 import HeaderN from "./components/headerN";
+import BlogPage from "./pages/blog";
+import PageWrap from "./components/common/PageWrap";
 
 function App() {
   return (
@@ -26,6 +28,14 @@ function App() {
           element={
             <LayoutWrapper>
               <HomePage />
+            </LayoutWrapper>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <LayoutWrapper>
+              <BlogPage />
             </LayoutWrapper>
           }
         />
