@@ -28,7 +28,7 @@ function BlogPage() {
               <div className=" w-[350px] md:w-full">
                 <div className="h-[220px]">
                   <img
-                    src={item?.urlToImage || "No Image"}
+                    src={item?.urlToImage || blogImg}
                     alt=""
                     className="h-full w-full object-cover"
                   />
@@ -39,11 +39,11 @@ function BlogPage() {
                     {item?.author || `News Source: ${item?.source?.name}`}
                   </span>
                   <span className="mr-2 font-bold ">.</span>
-                  <span className="text-sm font-bold">16 Jan 2023</span>
+                  <span className="text-sm font-bold">{item?.publishedAt}</span>
                 </p>
 
                 <div className="flex justify-between items-center mb-2">
-                  <p className="font-bold text-2xl">PM Mental models</p>
+                  <p className="font-bold text-lg">{item?.title}</p>
                   <img src={arrowUp} alt="" className="w-5 h-5" />
                 </div>
                 <div>

@@ -14,7 +14,7 @@ function HomePage() {
           Do you want to see what we have done so far?
         </p>
         <p className="text-[red] mt-7 text-center text-lg">
-          Go to Signup, Login and View the Dashboard
+          Check Blog, Signup, Login and View the Dashboard
         </p>
         <div className="flex gap-x-10 justify-center items-center mt-7">
           <Link to={"/signup"}>
