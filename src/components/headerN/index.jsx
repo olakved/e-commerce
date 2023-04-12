@@ -16,7 +16,7 @@ function HeaderN() {
   const navigate = useNavigate();
 
   return (
-    <div className="shadow-md w-full fixed top-0 left-0">
+    <div className="shadow-md  w-full fixed top-0 left-0">
       <div className="flex justify-between items-center bg-white py-4 md:px-10 px-7 md:flex-col">
         <div className="font-bold text-2xl cursor-pointer flex items-center text-dark-green">
           <span className="mr-3 ml-8">
@@ -57,6 +57,13 @@ function HeaderN() {
         >
           <img src={menuIcon} alt="" className="w-5" />
         </div>
+        <label
+          for="check"
+          className="bg-gray-100 w-20 h-10 relative rounded-full"
+        >
+          <input type="checkbox" id="check" className="sr-only peer" />
+          <span className="w-2/5 h-4/5 bg-light-green absolute rounded-full left-1 top-1 peer-checked:bg-dark-green peer-checked:left-11 transition-all duration-500"></span>
+        </label>
       </div>
     </div>
   );
