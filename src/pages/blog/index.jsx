@@ -20,7 +20,7 @@ function BlogPage() {
       {isLoading ? (
         <p>loading...</p>
       ) : error ? (
-        <p>Error while fetching data</p>
+        <p>Error while fetching data.</p>
       ) : data ? (
         <div>
           <div className=" py-3 px-20 mb-8 md:px-5 sm:px-2">
