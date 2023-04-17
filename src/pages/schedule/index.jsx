@@ -44,8 +44,12 @@ function Schedule() {
             </form>
           </div>
           <div>
-            {data?.users?.map((people) => (
-              <p>{people.name}</p>
+            {data?.map((people, index) => (
+              <div className="mt-5">
+                <p key={index} className="mb-3">
+                  {people.name}
+                </p>
+              </div>
             ))}
           </div>
         </div>

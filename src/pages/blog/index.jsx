@@ -5,6 +5,7 @@ import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import blogBg from "../../assets/blogBg.jpg";
 import searchIcon from "../../assets/Search.png";
+import spinner from "../../assets/spinnerSVG.svg";
 
 function BlogPage() {
   const { isLoading, error, data } = useQuery(["blopposts"], () =>
@@ -45,9 +46,12 @@ function BlogPage() {
         </div>
       </div>
       {isLoading ? (
-        <p>loading...</p>
+        <div className="flex gap-4">
+          <p className="animate-ping rounded-full h-4 w-4 bg-light-green font-extrabold  text-[30px]"></p>
+          <p className="font-bold ">loading...</p>
+        </div>
       ) : error ? (
-        <p>Error while fetching data.</p>
+        <p>Error while fetching blog data.</p>
       ) : data ? (
         <div>
           <div className="grid grid-cols-3 gap-5 lg:grid-cols-2 lg:gap-2 lg:gap-y-6 md:grid-cols-2 md:gap-2 md:gap-y-6 sm:grid-cols-1">
