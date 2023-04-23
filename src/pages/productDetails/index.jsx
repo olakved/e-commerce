@@ -1,9 +1,7 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import imgTest from "../../assets/profileImg.jpg";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import HeaderDashboard from "../../components/common/headerDashboard";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -28,10 +26,7 @@ function ProductDetails() {
   //   console.log(categories, "jjjjjjjjjj");
   return (
     <div>
-      <div>
-        <HeaderDashboard />
-      </div>
-      <div className="p-4">
+      <div className="p-4 mt-5">
         <button
           className="px-4 text-white bg-light-green rounded-md"
           onClick={() => navigate(-1)}

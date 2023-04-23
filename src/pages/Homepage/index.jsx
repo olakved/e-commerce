@@ -1,65 +1,8 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import LoginButton from "../../components/auth/loginButton";
-// import LogoutButton from "../../components/auth/logoutButton";
-// import searchIcon from "../../assets/Search.png";
-// import ProductPage from "../product";
-// import Search from "../search";
-
-// function HomePage() {
-//   return (
-//     <div className="w-screen h-screen overflow-hidden px-[80px] mt-[100px]">
-//       <div className="border-b-2 py-3 px-[10%]  md:px-2 sm:px-2 translate-[50%] ">
-//         <img
-//           src={searchIcon}
-//           alt=""
-//           className="absolute py-2 px-10 sm:py-1 sm:px-5"
-//         />
-//         <input
-//           type="search"
-//           placeholder="Search our website"
-//           className="w-full py-1 px-20 text-xl rounded-full border-2 outline-none sm:text-sm sm:px-14 "
-//         />
-//       </div>
-//       {/* <div className="mt-10">
-//         <h1 className="text-[red] font-bold text-4xl text-center">
-//           Page Under Construction!
-//         </h1>
-//         <p className="text-dark-green mt-7 text-center text-lg">
-//           Do you want to see what we have done so far?
-//         </p>
-//         <p className="text-[red] mt-7 text-center text-lg">
-//           Check Blog, Signup, Login and View the Dashboard
-//         </p>
-//         <div className="flex gap-x-10 justify-center items-center mt-7">
-//           <Link to={"/signup"}>
-//             <button className="px-7 py-3 bg-dark-green text-white rounded-md">
-//               Signup
-//             </button>
-//           </Link>
-//           <Link to={"/login"}>
-//             <button className="px-7 py-3 border-2 border-light-green bg-white text-dark-green rounded-md hover:bg-light-green hover:text-white">
-//               Login
-//             </button>
-//           </Link>
-//         </div>
-//         <div className="flex items-center justify-center mt-5 gap-x-5">
-//           <h1>Auth0 Login Test</h1>
-//           <LoginButton />
-//         </div>
-//       </div> */}
-//       <Search />
-//     </div>
-//   );
-// }
-
-// export default HomePage;
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { NavLink, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import ProductPage from "../product";
 import searchIcon from "../../assets/Search.png";
 
 function HomePage() {
@@ -70,7 +13,7 @@ function HomePage() {
   const navigate = useNavigate();
 
   return (
-    <div className=" px-[80px] mt-[10px]">
+    <div className=" px-[80px] mt-[10px] ">
       <div>
         {isLoading ? (
           <p>loading...</p>
@@ -115,7 +58,7 @@ function HomePage() {
                     </p>
                   </div>
                   <button className="py-1 mt-[10px] px-4 rounded-xl text-sm text-white bg-light-green ">
-                    <Link to={`/search/${item?.id}`}>
+                    <Link to={`/product/${item?.id}`}>
                       <p>view</p>
                     </Link>
                   </button>

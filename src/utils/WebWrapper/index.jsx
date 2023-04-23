@@ -1,11 +1,11 @@
 import React from "react";
 import Footer from "../../components/footer";
-import HeaderN from "../../components/headerN";
+import Header from "../../components/header";
 
 function LayoutWrapper({ children }) {
   return (
     <>
-      <HeaderN />
+      <Header />
       {children}
       <Footer />
     </>

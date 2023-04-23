@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import menuIcon from "../../assets/menuIcon.png";
 
-function HeaderN() {
+function Header() {
   const links = [
     { name: "HOME", link: "/" },
     // { name: "PRODUCT", link: "/product" },
@@ -44,11 +44,11 @@ function HeaderN() {
                 </Link>
               </li>
             ))}
-            <Link to="/login">
+            {/* <Link to="/login">
               <button className="bg-dark-green text-xl text-white py-[3px] px-6 rounded-md ml-6 hover:bg-light-green duration-500">
                 Login
               </button>
-            </Link>
+            </Link> */}
           </ul>
         </div>
         <div
@@ -69,4 +69,4 @@ function HeaderN() {
   );
 }
 
-export default HeaderN;
+export default Header;
