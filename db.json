@@ -1,42 +1,57 @@
 {
   "foods": [
-      {
-          "id": 1,
-          "checked": false,
-          "item": "Almonds, Unsalted, in the blue bag"
-      },
-      {
-          "id": 1,
-          "checked": false,
-          "item": "Pizza"
-      },
-      {
-          "id": 3,
-          "checked": false,
-          "item": "Bread"
-      }
-  ],
-
-  "users":[
     {
+      "id": 1,
+      "checked": false,
+      "item": "Almonds, Unsalted, in the blue bag"
+    },
+    {
+      "id": 1,
+      "checked": false,
+      "item": "Pizza"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "item": "Bread"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
       "name": "Lekan",
       "address": "Lagos",
       "phone": "08100805056"
     },
     {
+      "id": 2,
       "name": "Mike",
       "address": "Ogun",
       "phone": "09036188269"
     },
     {
+      "id": 3,
       "name": "Korede",
       "address": "Oyo",
       "phone": "09036188270"
     },
     {
+      "id": 4,
       "name": "Akin",
       "address": "Ondo",
       "phone": "09036188271"
+    },
+    {
+      "name": "kele",
+      "address": "kala",
+      "phone": "0909090909090",
+      "id": "55f640f8-d0dc-4ffb-a020-3c47061889ea"
+    },
+    {
+      "id": "12969d35-4c1f-47e7-a0e2-1d0941fed8d3",
+      "name": "kele",
+      "address": "kala",
+      "phone": "2349999999990"
     }
   ]
 }

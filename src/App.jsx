@@ -15,7 +15,7 @@ import UsersPage from "./pages/users";
 import SignupPage from "./pages/signup";
 import ErrorPage from "./pages/error";
 import ProductDetails from "./pages/productDetails";
-import BlogPage from "./pages/blog";
+// import BlogPage from "./pages/blog";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           path="/"
           element={
             <LayoutWrapper>
-              <BlogPage />
+              <HomePage />
             </LayoutWrapper>
           }
         />
@@ -35,7 +35,7 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
 
         {/* App Routes */}
-        <Route path="profile" element={<AppLayout />}>
+        {/* <Route path="profile" element={<AppLayout />}>
           <Route index element={<UserDashboard />} />
           <Route path="dashboard" element={<UserDashboard />} />
           <Route path="accounts" element={<Accounts />} />
@@ -45,9 +45,9 @@ function App() {
           <Route path="schedule" element={<Schedule />} />
           <Route path="search" element={<Search />}></Route>
           <Route path="settings" element={<Settings />} />
-        </Route>
+        </Route> */}
         <Route path="search/:id" element={<ProductDetails />} />
-        <Route path="logout" element={<LoginPage />} />
+        {/* <Route path="logout" element={<LoginPage />} /> */}
       </Routes>
       {/* </LayoutWrapper> */}
     </>
