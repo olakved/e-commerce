@@ -5,7 +5,7 @@ import menuIcon from "../../assets/menuIcon.png";
 
 function Header() {
   const links = [
-    { name: "HOME", link: "/" },
+    { name: "HOME", link: "/index" },
     // { name: "PRODUCT", link: "/product" },
     // { name: "BLOG", link: "/blog" },
     { name: "CONTACT", link: "/contact" },
@@ -18,12 +18,15 @@ function Header() {
   return (
     <div className="shadow-md  w-full sticky z-50  top-0 left-0">
       <div className="flex justify-between items-center bg-white py-4 md:px-10 px-7 md:flex-col">
-        <div className="font-bold text-2xl cursor-pointer flex items-center text-dark-green">
-          <span className="mr-3 ml-8">
-            <img src={logo} alt="logo" className="rounded-full w-10 h-10" />
-          </span>
-          <span>GeeStore</span>
-        </div>
+        <Link to="/index">
+          <div className="font-bold text-2xl cursor-pointer flex items-center text-dark-green">
+            <span className="mr-3 ml-8">
+              <img src={logo} alt="logo" className="rounded-full w-10 h-10" />
+            </span>
+            <span>GeeStore</span>
+          </div>
+        </Link>
+
         <div className={`${!open ? "md:hidden" : ""}`}>
           <ul
             className="flex gap-5 md:items-center md:flex-col md:pb-0 md:mt-5 md:static bg-white  md:w-auto  transition-all duration-500 ease-in ${
