@@ -5,6 +5,7 @@ import HomePage from "./pages/Homepage";
 
 import ErrorPage from "./pages/error";
 import ProductDetails from "./pages/productDetails";
+import ContactPage from "./pages/contactUs";
 
 function App() {
   return (
@@ -15,6 +16,14 @@ function App() {
           element={
             <LayoutWrapper>
               <HomePage />
+            </LayoutWrapper>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <LayoutWrapper>
+              <ContactPage />
             </LayoutWrapper>
           }
         />

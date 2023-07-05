@@ -13,7 +13,9 @@ function Footer() {
             made by {""}
           </span>
           <Link to="https://github.com/olakved" target="blank">
-            <span className="text-dark-green font-semibold">Okutubo Lekan</span>
+            <span className="text-dark-green font-semibold">
+              Okutubo Lekan & Co.
+            </span>
           </Link>
         </div>
       </div>
