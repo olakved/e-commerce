@@ -6,13 +6,16 @@ import HomePage from "./pages/Homepage";
 import ErrorPage from "./pages/error";
 import ProductDetails from "./pages/productDetails";
 import ContactPage from "./pages/contactUs";
+import LandingPage from "./pages/landingPage";
 
 function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
+
         <Route
-          path="/"
+          path="/index"
           element={
             <LayoutWrapper>
               <HomePage />
