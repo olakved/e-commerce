@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ParticlesBg from "../../components/particles/particlesBg";
+import { Typewriter } from "react-simple-typewriter";
 
 function LandingPage() {
-  const [seconds, setSeconds] = useState(5);
+  const [seconds, setSeconds] = useState(20);
 
   const navigate = useNavigate();
 
@@ -32,7 +33,26 @@ function LandingPage() {
         <div className="flex justify-center items-center h-full">
           <div className="max-w-[700px] flex flex-col items-center">
             <h2 className="text-white  font-bold text-[40px]">Welcome!</h2>
-            {/* {seconds === 0 ? navigate("/index") : ""} */}
+            <h2 className="text-white  font-bold text-[40px]">
+              <Typewriter
+                words={[
+                  "We sell",
+                  "Iphones",
+                  "Laptops",
+                  "Home Theatre",
+                  "Television",
+                  "Other Gadgets...",
+                ]}
+                loop={5}
+                cursor
+                cursorStyle="_"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+                // onLoopDone={handleDone}
+                // onType={handleType}
+              />
+            </h2>
             <p className="text-white text-center  text-sm">
               Click{" "}
               <span className="text-light-green font-semibold">
