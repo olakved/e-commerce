@@ -33,7 +33,7 @@ function LandingPage() {
         <div className="flex justify-center items-center h-full">
           <div className="max-w-[700px] flex flex-col items-center">
             <h2 className="text-white  font-bold text-[40px]">Welcome!</h2>
-            <h2 className="text-white  font-bold text-[40px]">
+            <h2 className="text-white  font-bold text-[25px]">
               <Typewriter
                 words={[
                   "We sell",
