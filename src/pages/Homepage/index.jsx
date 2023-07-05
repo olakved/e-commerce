@@ -11,7 +11,6 @@ function HomePage() {
       .get("https://db-kappa-nine.vercel.app/products")
       .then((res) => res.data)
   );
-  console.log(data);
   const navigate = useNavigate();
 
   return (
@@ -27,14 +26,10 @@ function HomePage() {
               <div
                 // onClick={() => navigate(`${item.id}`)}
                 key={item?.id}
-                className="w-[250px] rounded-lg  sm:w-[150px] border-2"
+                className="w-[250px] rounded-lg  sm:w-[180px] border-2"
               >
-                <div className="max-h-[120px] overflow-hidden flex justify-end rounded-lg">
-                  <img
-                    src={item?.images[0]}
-                    alt=""
-                    className="max-h-[120px] min-h-[120px] w-full"
-                  />
+                <div className="h-[180px] overflow-hidden flex justify-end rounded-lg">
+                  <img src={item?.images[0]} alt="" className="h-full w-full" />
                   <p className="absolute mr-2 mt-4 bg-[#ff000083] text-[white] text-[10px] rounded-md px-1 py-0">
                     -{item?.discountPercentage}%
                   </p>
