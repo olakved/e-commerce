@@ -54,11 +54,11 @@ function HomePage() {
                       &#x2B50; &#x2B50; &#x2B50;
                     </p>
                   </div>
-                  <button className="py-1 mt-[10px] px-4 rounded-xl text-sm text-white bg-light-green ">
-                    <Link to={`/product/${item?.id}`}>
+                  <Link to={`/product/${item?.id}`}>
+                    <button className="py-1 mt-[10px] px-4 rounded-xl text-sm text-white bg-light-green ">
                       <p>view</p>
-                    </Link>
-                  </button>
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
