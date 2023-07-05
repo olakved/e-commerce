@@ -7,7 +7,9 @@ function ProductDetails() {
   const { id } = useParams();
 
   const { isLoading, error, data } = useQuery(["products"], () =>
-    axios.get(`https://dummyjson.com/products/${id}`).then((res) => res.data)
+    axios
+      .get(`https://db-kappa-nine.vercel.app/products/${id}`)
+      .then((res) => res.data)
   );
   console.log(data);
 

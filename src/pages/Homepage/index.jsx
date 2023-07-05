@@ -7,25 +7,27 @@ import searchIcon from "../../assets/Search.png";
 
 function HomePage() {
   const { isLoading, error, data } = useQuery(["users"], () =>
-    axios.get("https://dummyjson.com/products").then((res) => res.data)
+    axios
+      .get("https://db-kappa-nine.vercel.app/products")
+      .then((res) => res.data)
   );
-
+  console.log(data);
   const navigate = useNavigate();
 
   return (
-    <div className=" px-[80px] mt-[10px] ">
+    <div className=" px-[80px] mt-[10px] md:px-[20px] ">
       <div>
         {isLoading ? (
           <p>loading...</p>
         ) : error ? (
           <p>Error while fetching data</p>
         ) : data ? (
-          <div className="grid grid-cols-5 gap-2 gap-y-5 max-h-fit lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
-            {data?.products?.map((item) => (
+          <div className="grid grid-cols-4 gap-2 gap-y-5 max-h-fit lg:grid-cols-3 md:grid-cols-2">
+            {data?.map((item) => (
               <div
                 // onClick={() => navigate(`${item.id}`)}
                 key={item?.id}
-                className="w-[200px] rounded-lg  sm:w-[150px] border-2"
+                className="w-[250px] rounded-lg  sm:w-[150px] border-2"
               >
                 <div className="max-h-[120px] overflow-hidden flex justify-end rounded-lg">
                   <img
