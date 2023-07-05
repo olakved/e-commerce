@@ -8,8 +8,8 @@ function Header() {
     { name: "HOME", link: "/" },
     // { name: "PRODUCT", link: "/product" },
     // { name: "BLOG", link: "/blog" },
-    { name: "ABOUT", link: "/about" },
     { name: "CONTACT", link: "/contact" },
+    { name: "ABOUT", link: "/about" },
   ];
 
   const [open, setOpen] = useState(false);
