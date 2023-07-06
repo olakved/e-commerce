@@ -49,14 +49,14 @@ const CategoryCard = [
   {
     icon: <GiLargeDress />,
     title: "Womens Wears",
-    link: "womens",
+    link: "womens-dresses",
     subTitle:
       "Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.",
   },
   {
     icon: <PiShirtFoldedLight />,
     title: "Men Wears",
-    link: "mens",
+    link: "mens-shirts",
     subTitle:
       "Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia.",
   },
@@ -65,6 +65,7 @@ const CategoryCard = [
 function Categories() {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState("smartphone");
+  //   const [defaultCategory, setDefaultCategory] = useState("smartphone");
 
   const { isLoading, error, data } = useQuery(["users"], () =>
     axios
@@ -72,13 +73,17 @@ function Categories() {
       .then((res) => res.data)
   );
 
+  const categoryData = data?.filter((obj) => {
+    return obj.category === selectedCategory;
+  });
+
   const handleButtonClick = (link) => {
     setSelectedCategory(link);
   };
 
-  const categoryData = data?.filter((obj) => {
-    return obj.category === selectedCategory;
-  });
+  // const categoryData = data?.filter((obj) => {
+  //   return obj.category === selectedCategory;
+  // });
 
   return (
     <div className="">
