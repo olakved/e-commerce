@@ -110,7 +110,7 @@ function Categories() {
         ))}
       </div>
       {/* <div><Outlet /></div> */}
-      <div className=" px-[50px] mt-[40px] mb-[70px] border-y-2 py-[40px] bg-slate-50">
+      <div className=" px-[50px] sm:px-[10px] mt-[40px] mb-[70px] border-y-2 py-[40px] bg-slate-50">
         <div className="grid grid-cols-4 gap-2 gap-y-5 max-h-fit lg:grid-cols-3 md:grid-cols-2">
           {categoryData?.slice(0, 4)?.map((item) => (
             <div
