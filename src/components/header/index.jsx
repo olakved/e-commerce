@@ -29,7 +29,7 @@ function Header() {
 
         <div className={`${!open ? "md:hidden" : ""}`}>
           <ul
-            className="flex gap-5 md:items-center md:flex-col md:pb-0 md:mt-5 md:static bg-white  md:w-auto  transition-all duration-500 ease-in ${
+            className="flex gap-5 mr-[60px] md:mr-0 md:items-center md:flex-col md:pb-0 md:mt-5 md:static bg-white  md:w-auto  transition-all duration-500 ease-in ${
             "
           >
             {links.map((link) => (
