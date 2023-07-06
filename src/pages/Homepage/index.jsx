@@ -58,7 +58,7 @@ function HomePage() {
             own home.
           </p>
           <Link to="/contact">
-            <button className="px-4 py-2 bg-dark-green text-white mt-[30px] rounded-lg hover:text-gray-500">
+            <button className="px-4 py-2 bg-dark-green text-white mt-[30px] sm:mt-[10px] rounded-lg hover:text-gray-500">
               Discover More
             </button>
           </Link>
