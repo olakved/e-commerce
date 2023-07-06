@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import searchIcon from "../../assets/Search.png";
 import homeBg from "../../assets/homeBg.jpg";
 import { Typewriter } from "react-simple-typewriter";
+import Categories from "./Categories";
 
 function HomePage() {
   const { isLoading, error, data } = useQuery(["users"], () =>
@@ -14,7 +15,7 @@ function HomePage() {
       .then((res) => res.data)
   );
 
-  // console.log(data);
+  console.log(data);
 
   const navigate = useNavigate();
 
@@ -63,6 +64,14 @@ function HomePage() {
             </button>
           </Link>
         </div>
+      </div>
+      <div className="mb-[30px]">
+        <Categories />
+        {/* {data?.map((cat, index) => (
+          <div key={index}>
+            <p>{cat?.category}</p>
+          </div>
+        ))} */}
       </div>
       <div className=" px-[80px] mt-[10px] md:px-[20px] ">
         <div>
