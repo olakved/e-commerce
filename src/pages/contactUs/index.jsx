@@ -18,7 +18,7 @@ function ContactPage() {
       </div>
       <div className="py-[50px] px-[100px] sm:px-[10px] flex justify-center items-center md:flex-col gap-5 md:gap-[30px]">
         <div className="w-[60%] md:w-full">
-          <p className="font-bold text-light-col text-[25px] mb-[20px]">
+          <p className="font-bold text-dark-green text-[25px] mb-[20px]">
             Let’s make the <span className="text-darky-col">world</span> better,
             together
           </p>
@@ -30,39 +30,39 @@ function ContactPage() {
               <input
                 type="text"
                 placeholder="First Name"
-                className="px-[15px] py-[8px] w-full border-gray-300 border-2 rounded-md outline-none focus:border-light-col"
+                className="px-[15px] py-[8px] w-full border-gray-300 border-2 rounded-md outline-none focus:border-dark-green"
               />
               <input
                 type="text"
                 placeholder="Last Name"
-                className="px-[15px] py-[8px] w-full border-gray-300 border-2 rounded-md outline-none focus:border-light-col"
+                className="px-[15px] py-[8px] w-full border-gray-300 border-2 rounded-md outline-none focus:border-dark-green"
               />
             </div>
             <div className="flex sm:flex-col gap-[20px] mb-[20px]">
               <input
                 type="email"
                 placeholder="Email*"
-                className="px-[15px] py-[8px] w-full border-gray-300 border-2 rounded-md outline-none focus:border-light-col"
+                className="px-[15px] py-[8px] w-full border-gray-300 border-2 rounded-md outline-none focus:border-dark-green"
               />
               <input
                 type="text"
                 placeholder="Phone"
-                className="px-[15px] py-[8px] w-full border-gray-300 border-2 rounded-md outline-none focus:border-light-col"
+                className="px-[15px] py-[8px] w-full border-gray-300 border-2 rounded-md outline-none focus:border-dark-green"
               />
             </div>
             <div className="mb-[20px]">
               <input
                 type="text"
                 placeholder="Message Title*"
-                className="px-[15px] py-[8px] w-full border-gray-300 border-2 rounded-md outline-none focus:border-light-col"
+                className="px-[15px] py-[8px] w-full border-gray-300 border-2 rounded-md outline-none focus:border-dark-green"
               />
               <textarea
                 placeholder="Tell us about it*"
                 rows="4"
-                className="mt-[20px] px-[15px]  py-2  h-[200px] w-full  border-gray-300 border-2 rounded-md outline-none focus:border-light-col"
+                className="mt-[20px] px-[15px]  py-2  h-[200px] w-full  border-gray-300 border-2 rounded-md outline-none focus:border-dark-green"
               />
             </div>
-            <button className="mt-[20px] px-[15px]  py-2 bg-light-col text-white rounded-md shadow-md">
+            <button className="mt-[20px] px-[15px]  py-2 bg-dark-green text-white rounded-md shadow-md">
               Send Message
             </button>
           </form>
