@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BsPhone } from "react-icons/bs";
 import { AiOutlineLaptop } from "react-icons/ai";
 import { TbPerfume } from "react-icons/tb";
@@ -65,7 +65,7 @@ const CategoryCard = [
 function Categories() {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState("smartphone");
-  //   const [defaultCategory, setDefaultCategory] = useState("smartphone");
+  const buttonRef = useRef(null);
 
   const { isLoading, error, data } = useQuery(["users"], () =>
     axios
@@ -80,6 +80,10 @@ function Categories() {
   const handleButtonClick = (link) => {
     setSelectedCategory(link);
   };
+
+  useEffect(() => {
+    buttonRef.current.click();
+  }, []);
 
   // const categoryData = data?.filter((obj) => {
   //   return obj.category === selectedCategory;
@@ -102,6 +106,7 @@ function Categories() {
         {CategoryCard?.map((item, index) => (
           <div
             key={index}
+            ref={buttonRef}
             onClick={() => handleButtonClick(`${item.link}`)}
             className="flex flex-col justify-center items-center w-[140px] h-[100px] p-2 lg:w-[120px] md:w-[80px] md:h-[80px] sm:h-[40px] sm:w-[40px] bg-gray-100 text-dark-green hover:text-light-green cursor-pointer  rounded-lg"
           >
@@ -115,12 +120,12 @@ function Categories() {
         ))}
       </div>
       {/* <div><Outlet /></div> */}
-      <div className=" px-[50px] sm:px-[10px] mt-[40px] mb-[70px] border-y-2 py-[40px] bg-slate-50">
+      <div className=" px-[50px] sm:px-[10px] mt-[40px] mb-[70px]  py-[40px] bg-slate-50/40">
         <div className="grid grid-cols-4 gap-2 gap-y-5 max-h-fit lg:grid-cols-3 md:grid-cols-2">
           {categoryData?.slice(0, 4)?.map((item) => (
             <div
               key={item?.id}
-              className="w-[250px] rounded-lg  sm:w-[180px] border-2"
+              className="w-[250px] rounded-lg  sm:w-[180px] shadow-xl bg-white"
             >
               <div className="h-[180px] overflow-hidden flex justify-end rounded-lg">
                 <img src={item?.images[0]} alt="" className="h-full w-full" />
@@ -128,7 +133,7 @@ function Categories() {
                   -{item?.discountPercentage}%
                 </p>
               </div>
-              <div className="py-2 px-1">
+              <div className="pt-2 pb-4 px-3">
                 <div className="flex-col justify-between items-start ">
                   <div>
                     <p className="text-[12px] truncate mb-[10px]">
