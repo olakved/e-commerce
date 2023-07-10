@@ -39,7 +39,7 @@ function ProductDetails() {
       <div className=" py-10 px-16 sm:py-2 sm:px-5">
         <div className="flex justify-center items-start gap-x-10 sm:flex-col ">
           <div className=" w-1/2 mt-10 sm:w-full sm:mb-4">
-            <img src={data?.images[0]} alt="" className="" />
+            <img src={data?.images[0]} alt="product Image" className="" />
           </div>
           <div className="w-1/2 sm:w-full">
             <div className="border-b-2 pb-3">

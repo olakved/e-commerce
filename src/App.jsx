@@ -11,6 +11,7 @@ import Skincare from "./pages/Homepage/categories/Skincare";
 import Fragrances from "./pages/Homepage/categories/Fragrances";
 import Laptops from "./pages/Homepage/categories/Laptops";
 import Smartphone from "./pages/Homepage/categories/Smartphone";
+import CategoryPage from "./pages/categoryPage";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
 
         <Route path="product/:id" element={<ProductDetails />} />
+        <Route path="/products/category/:category" element={<CategoryPage />} />
 
         {/* App Routes */}
         <Route path="smartphones" element={<Smartphone />}>

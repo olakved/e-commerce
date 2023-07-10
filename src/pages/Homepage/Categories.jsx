@@ -64,10 +64,10 @@ const CategoryCard = [
 
 function Categories() {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState("smartphone");
+  const [selectedCategory, setSelectedCategory] = useState("smartphones");
   const buttonRef = useRef(null);
 
-  const { isLoading, error, data } = useQuery(["users"], () =>
+  const { isLoading, error, data } = useQuery(["products"], () =>
     axios
       .get("https://db-kappa-nine.vercel.app/products")
       .then((res) => res.data)
@@ -84,6 +84,17 @@ function Categories() {
   useEffect(() => {
     buttonRef.current.click();
   }, []);
+
+  const buttonText = selectedCategory
+    ? `View all ${
+        selectedCategory.replace("-", " ").substring(0, 1).toUpperCase() +
+        selectedCategory.replace("-", " ").substring(1)
+      }`
+    : "View";
+
+  const handleNavigation = () => {
+    return navigate(`/products/category/${selectedCategory}`);
+  };
 
   // const categoryData = data?.filter((obj) => {
   //   return obj.category === selectedCategory;
@@ -155,12 +166,20 @@ function Categories() {
                 </div>
                 <Link to={`/product/${item?.id}`}>
                   <button className="py-1 mt-[10px] px-4 rounded-xl text-sm text-white bg-light-green ">
-                    <p>view</p>
+                    <p>view Product</p>
                   </button>
                 </Link>
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex justify-center mt-[40px]">
+          <button
+            onClick={handleNavigation}
+            className="flex items-center text-dark-green gap-[30px] px-4 py-2 hover:bg-dark-green hover:text-white"
+          >
+            {buttonText} <BiRightArrowCircle />
+          </button>
         </div>
       </div>
     </div>
